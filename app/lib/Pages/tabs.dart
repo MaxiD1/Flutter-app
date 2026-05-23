@@ -8,7 +8,7 @@ class TabsPage extends StatelessWidget {
     return DefaultTabController(
       // Cambiar dependiendo de cuantas pestañas
       // queramos
-      length: length,
+      length: 1,
       child: Scaffold(
         appBar: AppBar(
           // Cambiar titulo

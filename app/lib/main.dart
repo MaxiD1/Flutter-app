@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Pages/tabs.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,5 +15,4 @@ class MainApp extends StatelessWidget {
       home: Tabs()
     );
   }
-}
 }

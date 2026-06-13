@@ -2,11 +2,13 @@ class Book {
   final String title;
   final String author;
   final String cover;
+  final String id;
 
   Book({
     required this.title,
     required this.author,
     required this.cover,
+    required this.id,
   });
 
   factory Book.fromJson(Map<String, dynamic> json) {
@@ -24,6 +26,7 @@ class Book {
           ? json['author_name'][0]
           : 'Desconocido',
       cover: coverUrl,
+      id: json['key'] ?? ''
     );
   }
 }

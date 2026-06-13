@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
-import 'Pages/tabs.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MainApp());
+import 'screens/login_screen.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Tabs()
+      title: 'Librería Virtual',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
+      home: const LoginScreen(),
     );
   }
 }
